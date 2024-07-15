@@ -1,0 +1,24 @@
+"""
+Exercício 2: Verificação de Número Primo
+
+Crie uma função chamada eh_primo que verifique se um número é primo. Um número primo é aquele que é maior que 1 e não pode ser formado pela multiplicação de dois números menores naturais.
+Dicas:
+
+    Um número primo tem exatamente dois divisores: 1 e ele mesmo.
+    Verifique a divisibilidade de n por todos os números de 2 até a raiz quadrada de n.
+"""
+
+def eh_primo(n):
+    if n <= 1:
+        return 'Número inválido'
+
+    for i in range(2, n):
+        if n % i == 0:
+            return f'O número {n} não é primo'
+
+    return f'O número {n} é primo'
+
+print(eh_primo(9))
+print(eh_primo(3))
+print(eh_primo(7))
+print(eh_primo(8))
